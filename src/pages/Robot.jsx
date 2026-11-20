@@ -1,19 +1,18 @@
 
+import RobotHero from "../components/robot/RobotHero";
+import RobotOverview from "../components/robot/RobotOverview";
+import RobotSpecs from "../components/robot/RobotSpecs";
+import robotData from "../data/robotData";
+import "../styles/robot.css";
+
 function Robot() {
   return (
-    <main className="inner-page">
-      <p className="eyebrow">GEAR SHIFT / ENGINEERING</p>
-      <h1>One Robot. Many Ideas.</h1>
-      <p className="page-intro">
-        Explore the design, electronics and software
-        behind our competition robot.
-      </p>
+    <main className="inner-page robot-page">
+      <RobotHero data={robotData.hero} />
 
-      <img
-        src="/images/robot/robot-cad-render.png"
-        alt="Gear Shift robot CAD design"
-        className="page-robot-image"
-      />
+      <RobotOverview data={robotData.overview} />
+
+      <RobotSpecs specs={robotData.specifications} />
 
       <section className="page-panel">
         <h2>Mechanical Engineering</h2>

@@ -1,0 +1,98 @@
+
+/* Robot page layout */
+
+.robot-page {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+/* Section headings */
+
+.robot-section-heading {
+  max-width: 760px;
+  margin-bottom: 28px;
+}
+
+.robot-section-heading h2 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  margin: 8px 0 14px;
+  color: #ffffff;
+}
+
+.robot-section-heading > p:last-child {
+  color: #b9b5c9;
+  line-height: 1.8;
+}
+
+/* Overview */
+
+.robot-overview {
+  padding: 28px 0 0;
+}
+
+/* Specifications */
+
+.robot-specs {
+  padding: 32px 0;
+}
+
+.robot-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.robot-spec-card {
+  padding: 24px;
+  min-height: 125px;
+  border: 1px solid rgba(145, 110, 255, 0.25);
+  border-radius: 16px;
+  background: linear-gradient(
+    145deg,
+    rgba(91, 55, 170, 0.16),
+    rgba(27, 24, 48, 0.75)
+  );
+  transition: transform 0.25s ease,
+              border-color 0.25s ease;
+}
+
+.robot-spec-card:hover {
+  transform: translateY(-5px);
+  border-color: #9065ff;
+}
+
+.robot-spec-label {
+  color: #aaa2c5;
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+}
+
+.robot-spec-card h3 {
+  color: #ffffff;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Responsive layout */
+
+@media (max-width: 800px) {
+  .robot-specs-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .robot-page {
+    gap: 32px;
+  }
+
+  .robot-specs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .robot-spec-card {
+    min-height: auto;
+  }
+}

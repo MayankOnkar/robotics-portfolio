@@ -6,7 +6,7 @@ import Home from "./pages/Home";
 import Team from "./pages/Team";
 import Robot from "./pages/Robot";
 import Journey from "./pages/Journey";
-import Gallery from "./pages/GAllery";
+import Gallery from "./pages/Gallery";
 
 function App() {
   return (
