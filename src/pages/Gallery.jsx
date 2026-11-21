@@ -30,7 +30,7 @@ const categories = [
         caption: "Gripper mechanism"
       },
       {
-        src: assetPath("/images/robot/controller-electronics.jpg"),
+        src: assetPath("/images/robot/controller-electronics.JPG"),
         caption: "Controller electronics"
       }
     ]
