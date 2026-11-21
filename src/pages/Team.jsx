@@ -1,40 +1,42 @@
+import assetPath from "../utils/assetPath";
+
 
 const teamMembers = [
   {
     name: "Sanskriti Mahapatra",
     grade: "Grade 10",
     role: "Team Captain & Technical Lead",
-    image: "/images/team/sanskriti.jpeg",
+    image: assetPath("/images/team/sanskriti.jpeg"),
   },
   {
     name: "Sri Saanvitha Daparthi",
     grade: "Grade 10",
     role: "Project Manager & Electrical",
-    image: "/images/team/saanvitha.jpeg",
+    image: assetPath("/images/team/saanvitha.jpeg"),
   },
   {
     name: "Ayushmaan Madan",
     grade: "Grade 10",
     role: "Mechanical & Gripper",
-    image: "/images/team/ayushmaan.png",
+    image: assetPath("/images/team/ayushmaan.png"),
   },
   {
     name: "Sampath Ashok Tankala",
     grade: "Grade 10",
     role: "Documentation & Socials",
-    image: "/images/team/sampath.jpeg",
+    image: assetPath("/images/team/sampath.jpeg"),
   },
   {
     name: "Kongara Rakshan",
     grade: "Grade 9",
     role: "Robot Operator & Mechanics",
-    image: "/images/team/rakshan.jpeg",
+    image: assetPath("/images/team/rakshan.jpeg"),
   },
   {
     name: "Mahir Patel",
     grade: "Grade 9",
     role: "Mechanical & Strategy",
-    image: "/images/team/mahir.jpeg",
+    image: assetPath("/images/team/mahir.jpeg"),
   },
 ];
 
@@ -76,7 +78,7 @@ function Team() {
 
         <div className="mentor-card">
           <img
-            src="/images/team/mayank-onkar-mentor.jpeg"
+           src={assetPath("/images/team/mayank-onkar-mentor.jpeg")}
             alt="Gear Shift faculty mentor"
             loading="lazy"
           />

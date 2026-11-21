@@ -1,12 +1,16 @@
 
 import { NavLink } from "react-router-dom";
 
+import assetPath from "../utils/assetPath";
+
+
+
 function Navbar() {
   return (
     <nav className="navbar">
       <NavLink to="/" className="brand">
         <img
-          src="/images/branding/gear-shift-logo.jpeg"
+          src={assetPath("/images/branding/gear-shift-logo.jpeg")}
           alt="Gear Shift logo"
           className="brand-logo"
         />

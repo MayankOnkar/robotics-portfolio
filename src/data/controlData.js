@@ -1,3 +1,4 @@
+import assetPath from "../utils/assetPath";
 
 const controlData = {
   heading: "Wireless Control System",
@@ -9,7 +10,7 @@ const controlData = {
     title: "Handheld Manual Controller",
     description:
       "A game-controller-style device allows the operator to send direction and speed commands to the robot.",
-    image: "/images/robot/controller-electronics.JPG",
+    image: assetPath("/images/robot/controller-electronics.JPG"),
 
     // "C:\Users\MAYANK\Development\robotics-portfolio\public\images\robot\controller-electronics.JPG"
     imageAlt: "Handheld wireless controller used to operate Gear Shift Robot",

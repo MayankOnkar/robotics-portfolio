@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 
+import assetPath from "../utils/assetPath";
 
 const categories = [
   {
@@ -7,7 +8,7 @@ const categories = [
     description: "The people behind Gear Shift.",
     images: [
       {
-        src: "/images/team/team-with-robot.jpg",
+        src:  assetPath("/images/team/team-with-robot.jpg"),
         caption: "Gear Shift team with our robot"
       }
     ]
@@ -17,19 +18,19 @@ const categories = [
     description: "Our robot's design and development.",
     images: [
       {
-        src: "/images/robot/robot-cad-render.png",
+        src: assetPath("/images/robot/robot-cad-render.png"),
         caption: "Robot CAD render"
       },
       {
-        src: "/images/robot/robot-assembled-on-workbench.jpg",
+        src: assetPath("/images/robot/robot-assembled-on-workbench.jpg"),
         caption: "Robot assembly"
       },
       {
-        src: "/images/robot/gripper-detail.jpg",
+        src: assetPath("/images/robot/gripper-detail.jpg"),
         caption: "Gripper mechanism"
       },
       {
-        src: "/images/robot/controller-electronics.jpg",
+        src: assetPath("/images/robot/controller-electronics.jpg"),
         caption: "Controller electronics"
       }
     ]
@@ -49,7 +50,7 @@ const categories = [
     "IMG_9376", "IMG_9393", "IMG_9401", "IMG_9404",
     "IMG_9405", "IMG_9415", "IMG_9418", "IMG_9421"
   ].map((filename, index) => ({
-    src: `/images/competitions/${filename}.jpeg`,
+    src: assetPath(`/images/competitions/${filename}.jpeg`),
     caption: `Regional competition — Photo ${String(index + 1).padStart(2, "0")}`
   }))
 },

@@ -1,4 +1,6 @@
 
+import assetPath from "../utils/assetPath";
+
 
 function Home() {
   return (
@@ -58,7 +60,7 @@ function Home() {
             </div>
 
             <img
-              src="/images/robot/robot-cad-render.png"
+              src={assetPath("/images/robot/robot-cad-render.png")}
               alt="Gear Shift competition robot CAD render"
               className="robot-render"
             />

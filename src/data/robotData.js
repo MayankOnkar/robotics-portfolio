@@ -1,4 +1,4 @@
-
+import assetPath from "../utils/assetPath";
 const robotData = {
   name: "Gear Shift Robot",
 
@@ -7,7 +7,7 @@ const robotData = {
     title: "Engineered to Move. Built to Perform.",
     description:
       "Meet Gear Shift Robot — our four-wheel competition robot, designed and developed through mechanical, electronics and software engineering.",
-    image: "/images/robot/robot-cad-render.png",
+    image: assetPath("/images/robot/robot-cad-render.png"),
     imageAlt: "CAD design of Gear Shift Robot",
   },
 
