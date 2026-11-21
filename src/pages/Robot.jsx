@@ -5,6 +5,24 @@ import RobotSpecs from "../components/robot/RobotSpecs";
 import robotData from "../data/robotData";
 import "../styles/robot.css";
 
+import MechanicalEngineering from "../components/Robot/MechanicalEngineering";
+import mechanicalData from "../data/mechanicalData";
+
+import ElectronicsEngineering from "../components/Robot/ElectronicsEngineering";
+import electronicsData from "../data/electronicsData";
+
+import WirelessControl from "../components/Robot/WirelessControl";
+import controlData from "../data/controlData";
+
+import CompetitionSection from "../components/Robot/CompetitionSection";
+import competitionData from "../data/competitionData";
+
+import FutureImprovements from "../components/Robot/FutureImprovements";
+import futureData from "../data/futureData";
+
+import ComputationalEngineering from "../components/Robot/ComputationalEngineering";
+import computationalData from "../data/computationalData";
+
 function Robot() {
   return (
     <main className="inner-page robot-page">
@@ -14,31 +32,20 @@ function Robot() {
 
       <RobotSpecs specs={robotData.specifications} />
 
-      <section className="page-panel">
-        <h2>Mechanical Engineering</h2>
-        <p>
-          Our robot uses a four-wheel mobile platform,
-          a two-layer chassis and a servo-actuated
-          arm-link and gripper mechanism.
-        </p>
-      </section>
+      <MechanicalEngineering data={mechanicalData} />
 
-      <section className="page-panel">
-        <h2>Electronics and Control</h2>
-        <p>
-          The electronics system integrates the
-          controller, circuit board, motor control,
-          sensors and supporting wiring.
-        </p>
-      </section>
+      <ElectronicsEngineering data={electronicsData} />
 
-      <section className="page-panel">
-        <h2>Computational Engineering</h2>
-        <p>
-          Our software uses C++ and the NRL SDK
-          for robot control, movement and testing.
-        </p>
-      </section>
+      <WirelessControl data={controlData} />
+
+      <ComputationalEngineering data={computationalData} />
+
+      <CompetitionSection data={competitionData} />
+
+      <FutureImprovements data={futureData} />
+
+
+      
     </main>
   );
 }

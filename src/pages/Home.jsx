@@ -106,7 +106,7 @@ function Home() {
           <h2>One robot. Three disciplines.</h2>
 
           <div className="discipline-grid">
-            <article>
+            <article className="discipline-card">
               <span>01</span>
               <h3>Mechanical</h3>
               <p>
@@ -115,7 +115,7 @@ function Home() {
               </p>
             </article>
 
-            <article>
+            <article className="discipline-card">
               <span>02</span>
               <h3>Electronics</h3>
               <p>
@@ -124,7 +124,7 @@ function Home() {
               </p>
             </article>
 
-            <article>
+            <article className="discipline-card">
               <span>03</span>
               <h3>Computational</h3>
               <p>
@@ -140,7 +140,7 @@ function Home() {
           <h2>Progress worth celebrating.</h2>
 
           <div className="achievement-grid">
-            <article>
+            <article className="achievement-card">
               <strong>TOP 3</strong>
               <h3>Regional Qualification</h3>
               <p>
@@ -149,7 +149,7 @@ function Home() {
               </p>
             </article>
 
-            <article>
+            <article className="achievement-card">
               <strong>RUNNER-UP</strong>
               <h3>Regional Final Match</h3>
               <p>
@@ -158,7 +158,7 @@ function Home() {
               </p>
             </article>
 
-            <article>
+            <article className="achievement-card">
               <strong>1ST RANK</strong>
               <h3>Tech Titans Award</h3>
               <p>

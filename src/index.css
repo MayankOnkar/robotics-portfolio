@@ -289,6 +289,16 @@ a {
   line-height: 1.8;
 }
 
+.discipline-card:hover {
+  transform: translateY(-5px);
+  border-color: #638cff;
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+  border-color: #638cff;
+}
+
 .achievement-section {
   background: #09091b;
 }
@@ -576,6 +586,11 @@ a {
   border-color: #8655ed;
 }
 
+.mentor-card:hover {
+  transform: translateY(-6px);
+  border-color: #8655ed;
+}
+
 .member-image-wrap {
   height: 310px;
   position: relative;
@@ -680,6 +695,13 @@ a {
   color: var(--muted);
   line-height: 1.8;
 }
+
+.team-closing:hover {
+  background:
+    radial-gradient(circle at right, rgba(237, 112, 208, 0.35), transparent 55%),
+    #101025;
+}
+
 
 @media (max-width: 900px) {
   .team-grid {
