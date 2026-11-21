@@ -1,7 +1,7 @@
 
-import RobotHero from "../components/robot/RobotHero";
-import RobotOverview from "../components/robot/RobotOverview";
-import RobotSpecs from "../components/robot/RobotSpecs";
+import RobotHero from "../components/Robot/RobotHero";
+import RobotOverview from "../components/Robot/RobotOverview";
+import RobotSpecs from "../components/Robot/RobotSpecs";
 import robotData from "../data/robotData";
 import "../styles/robot.css";
 
