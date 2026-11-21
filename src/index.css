@@ -289,15 +289,15 @@ a {
   line-height: 1.8;
 }
 
-.discipline-card:hover {
+.discipline-card:hover, .achievement-card:hover{
   transform: translateY(-5px);
   border-color: #638cff;
+
+  background:
+    radial-gradient(circle at right, rgba(237, 112, 208, 0.35), transparent 55%),
+    #101025;
 }
 
-.achievement-card:hover {
-  transform: translateY(-5px);
-  border-color: #638cff;
-}
 
 .achievement-section {
   background: #09091b;
@@ -505,6 +505,7 @@ a {
   margin-top: 25px;
 }
 
+/*
 .gallery-card {
   overflow: hidden;
   background: var(--surface);
@@ -529,6 +530,45 @@ a {
   color: var(--text);
   font-size: 13px;
 }
+
+*/
+
+
+.gallery-card {
+  overflow: hidden;
+  background: #101025;
+  border: 1px solid rgba(129, 60, 255, 0.25);
+  border-radius: 12px;
+  transition: transform 0.3s ease, border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-5px);
+  border-color: #8655ed;
+  box-shadow: 0 12px 35px rgba(80, 50, 200, 0.18);
+}
+
+.gallery-card img {
+  display: block;
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.045);
+}
+
+.gallery-card figcaption {
+  padding: 16px 18px;
+  color: #e5ddff;
+  font-size: 13px;
+  line-height: 1.6;
+  background: #101025;
+}
+
 
 .gallery-empty {
   padding: 25px;
@@ -581,14 +621,13 @@ a {
   transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-.member-card:hover {
+.member-card:hover, .mentor-card:hover{
   transform: translateY(-6px);
   border-color: #8655ed;
-}
 
-.mentor-card:hover {
-  transform: translateY(-6px);
-  border-color: #8655ed;
+  background:
+    radial-gradient(circle at right, rgba(237, 112, 208, 0.35), transparent 55%),
+    #101025;
 }
 
 .member-image-wrap {
@@ -730,3 +769,95 @@ a {
     padding: 28px;
   }
 }
+
+
+
+/* Gallery Lightbox */
+
+.gallery-image-button {
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: zoom-in;
+  overflow: hidden;
+}
+
+.gallery-image-button:focus-visible {
+  outline: 2px solid #a77aff;
+  outline-offset: -3px;
+}
+
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(3, 3, 12, 0.94);
+  backdrop-filter: blur(10px);
+}
+
+.lightbox-content {
+  position: relative;
+  width: min(100%, 1050px);
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.lightbox-content img {
+  display: block;
+  max-width: 100%;
+  max-height: 78vh;
+  object-fit: contain;
+  border: 1px solid rgba(167, 122, 255, 0.35);
+  border-radius: 10px;
+}
+
+.lightbox-content p {
+  color: #e5ddff;
+  font-size: 14px;
+  text-align: center;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -18px;
+  right: -18px;
+  z-index: 2;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(167, 122, 255, 0.4);
+  border-radius: 50%;
+  background: #17132b;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.lightbox-close:hover {
+  background: #813cff;
+}
+
+@media (max-width: 650px) {
+  .lightbox-overlay {
+    padding: 16px;
+  }
+
+  .lightbox-content img {
+    max-height: 75vh;
+  }
+
+  .lightbox-close {
+    top: -12px;
+    right: -8px;
+  }
+}
+
+

@@ -60,6 +60,10 @@
 .robot-spec-card:hover {
   transform: translateY(-5px);
   border-color: #9065ff;
+
+  background:
+    radial-gradient(circle at right, rgba(237, 112, 208, 0.35), transparent 55%),
+    #101025;
 }
 
 .robot-spec-label {
@@ -127,6 +131,10 @@
 .mechanical-card:hover {
   transform: translateY(-5px);
   border-color: #9065ff;
+
+  background:
+    radial-gradient(circle at right, rgba(237, 112, 208, 0.35), transparent 55%),
+    #101025;
 }
 
 .mechanical-image-wrap {
@@ -204,6 +212,10 @@
 .electronics-card:hover {
   transform: translateY(-5px);
   border-color: #638cff;
+
+  background:
+    radial-gradient(circle at right, rgba(237, 112, 208, 0.35), transparent 55%),
+    #101025;
 }
 
 .electronics-image-wrap {
@@ -347,19 +359,13 @@
   background: rgba(27, 24, 48, 0.75);
 }
 
-.control-detail-card:hover {
+.control-detail-card:hover, .controller-feature:hover, .control-flow-item:hover {
   transform: translateY(-5px);
   border-color: #638cff;
-}
 
-.controller-feature:hover {
-  transform: translateY(-5px);
-  border-color: #638cff;
-}
-
-.control-flow-item:hover {
-  transform: translateY(-5px);
-  border-color: #638cff;
+  background:
+    radial-gradient(circle at right, rgba(237, 112, 208, 0.35), transparent 55%),
+    #101025;
 }
 
 @media (max-width: 800px) {
@@ -431,20 +437,15 @@
   margin: 8px 0 0;
 }
 
-.competition-objective:hover {
+.competition-objective:hover, .competition-card:hover, .competition-gallery-item:hover {
   transform: translateY(-5px);
   border-color: #638cff;
+
+  background:
+    radial-gradient(circle at right, rgba(237, 112, 208, 0.35), transparent 55%),
+    #101025;
 }
 
-.competition-card:hover {
-  transform: translateY(-5px);
-  border-color: #638cff;
-}
-
-.competition-gallery-item:hover {
-  transform: translateY(-5px);
-  border-color: #638cff;
-}
 
 .competition-objective-content h3 {
   color: #ffffff;
@@ -489,6 +490,10 @@
 
 .competition-card:hover .competition-image-wrap img {
   transform: scale(1.04);
+
+  background:
+    radial-gradient(circle at right, rgba(237, 112, 208, 0.35), transparent 55%),
+    #101025;
 }
 
 .competition-card-content {
@@ -589,6 +594,10 @@
 .future-card:hover {
   transform: translateY(-4px);
   border-color: rgba(139, 92, 246, 0.65);
+
+  background:
+    radial-gradient(circle at right, rgba(237, 112, 208, 0.35), transparent 55%),
+    #101025;
 }
 
 .future-category {
@@ -643,6 +652,10 @@
 .computational-card:hover {
   transform: translateY(-4px);
   border-color: rgba(59, 130, 246, 0.7);
+
+  background:
+    radial-gradient(circle at right, rgba(237, 112, 208, 0.35), transparent 55%),
+    #101025;
 }
 
 .computational-card h3 {

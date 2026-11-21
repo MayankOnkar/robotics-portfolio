@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 
 const categories = [
   {
@@ -32,11 +34,27 @@ const categories = [
       }
     ]
   },
-  {
-    title: "Regionals",
-    description: "Our regional competition experience.",
-    images: []
-  },
+
+
+{
+  title: "Regionals",
+  description: "Our regional competition experience.",
+  images: [
+    "IMG_9281", "IMG_9284", "IMG_9285", "IMG_9286",
+    "IMG_9288", "IMG_9293", "IMG_9299", "IMG_9300",
+    "IMG_9305", "IMG_9306", "IMG_9307", "IMG_9314",
+    "IMG_9316", "IMG_9318", "IMG_9324", "IMG_9331",
+    "IMG_9344", "IMG_9345", "IMG_9351", "IMG_9353",
+    "IMG_9356", "IMG_9362", "IMG_9365", "IMG_9369",
+    "IMG_9376", "IMG_9393", "IMG_9401", "IMG_9404",
+    "IMG_9405", "IMG_9415", "IMG_9418", "IMG_9421"
+  ].map((filename, index) => ({
+    src: `/images/competitions/${filename}.jpeg`,
+    caption: `Regional competition — Photo ${String(index + 1).padStart(2, "0")}`
+  }))
+},
+
+
   {
     title: "Nationals",
     description: "Our national competition journey.",
@@ -45,6 +63,56 @@ const categories = [
 ];
 
 function Gallery() {
+
+  const [selectedImage, setSelectedImage] = useState(null);
+
+
+  useEffect(() => {
+  if (!selectedImage) return;
+
+  const handleKeyDown = (event) => {
+    if (event.key === "Escape") {
+      setSelectedImage(null);
+    }
+
+    const category = categories.find(
+      (item) => item.title === selectedImage.categoryTitle
+    );
+
+    if (!category) return;
+
+    const currentIndex = category.images.findIndex(
+      (item) => item.src === selectedImage.src
+    );
+
+    if (event.key === "ArrowLeft" && currentIndex > 0) {
+      setSelectedImage({
+        ...category.images[currentIndex - 1],
+        categoryTitle: category.title
+      });
+    }
+
+    if (
+      event.key === "ArrowRight" &&
+      currentIndex < category.images.length - 1
+    ) {
+      setSelectedImage({
+        ...category.images[currentIndex + 1],
+        categoryTitle: category.title
+      });
+    }
+  };
+
+  window.addEventListener("keydown", handleKeyDown);
+
+  return () => {
+    window.removeEventListener("keydown", handleKeyDown);
+  };
+}, [selectedImage]);
+
+
+
+
   return (
     <main className="inner-page">
       <p className="eyebrow">GEAR SHIFT / MOMENTS</p>
@@ -63,7 +131,27 @@ function Gallery() {
             {category.images.length > 0 ? (
               category.images.map((item) => (
                 <figure className="gallery-card" key={item.src}>
-                  <img src={item.src} alt={item.caption} />
+
+                  {/*<img src={item.src} alt={item.caption} />*/}
+
+                    <button
+                      type="button"
+                      className="gallery-image-button"
+                      
+
+                      onClick={() =>
+                        setSelectedImage({
+                          ...item,
+                          categoryTitle: category.title
+                        })
+                      }
+
+
+                      aria-label={`Enlarge ${item.caption}`}
+                    >
+                      <img src={item.src} alt={item.caption} />
+                    </button>              
+
                   <figcaption>{item.caption}</figcaption>
                 </figure>
               ))
@@ -75,6 +163,40 @@ function Gallery() {
           </div>
         </section>
       ))}
+
+{selectedImage && (
+  <div
+    className="lightbox-overlay"
+    onClick={() => setSelectedImage(null)}
+  >
+    <div
+      className="lightbox-content"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Enlarged photograph"
+      onClick={(event) => event.stopPropagation()}
+    >
+      <button
+        className="lightbox-close"
+        type="button"
+        onClick={() => setSelectedImage(null)}
+        aria-label="Close photo viewer"
+      >
+        &times;
+      </button>
+
+      <img
+        src={selectedImage.src}
+        alt={selectedImage.caption}
+      />
+
+      <p>{selectedImage.caption}</p>
+    </div>
+  </div>
+)}
+
+
+
     </main>
   );
 }
