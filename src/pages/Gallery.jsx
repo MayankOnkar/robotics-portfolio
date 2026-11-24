@@ -50,8 +50,8 @@ const categories = [
     "IMG_9376", "IMG_9393", "IMG_9401", "IMG_9404",
     "IMG_9405", "IMG_9415", "IMG_9418", "IMG_9421"
   ].map((filename, index) => ({
-  src: `/images/competitions/${filename}.jpeg`,
-  thumbnail: `/images/competitions/thumbnail/${filename}_50percent.jpeg`,
+src: assetPath(`/images/competitions/${filename}.jpeg`),
+thumbnail: assetPath(`/images/competitions/thumbnail/${filename}_50percent.jpeg`),
   caption: `Regional competition — Photo ${String(index + 1).padStart(2, "0")}`
 }))
 },
