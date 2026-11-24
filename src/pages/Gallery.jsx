@@ -50,9 +50,10 @@ const categories = [
     "IMG_9376", "IMG_9393", "IMG_9401", "IMG_9404",
     "IMG_9405", "IMG_9415", "IMG_9418", "IMG_9421"
   ].map((filename, index) => ({
-    src: assetPath(`/images/competitions/${filename}.jpeg`),
-    caption: `Regional competition — Photo ${String(index + 1).padStart(2, "0")}`
-  }))
+  src: `/images/competitions/${filename}.jpeg`,
+  thumbnail: `/images/competitions/thumbnail/${filename}_50percent.jpeg`,
+  caption: `Regional competition — Photo ${String(index + 1).padStart(2, "0")}`
+}))
 },
 
 
@@ -150,7 +151,12 @@ function Gallery() {
 
                       aria-label={`Enlarge ${item.caption}`}
                     >
-                      <img src={item.src} alt={item.caption} />
+                      <img
+                      src={item.thumbnail || item.src}
+                      alt={item.caption}
+                      loading="lazy"
+                      decoding="async"
+                    />
                     </button>              
 
                   <figcaption>{item.caption}</figcaption>

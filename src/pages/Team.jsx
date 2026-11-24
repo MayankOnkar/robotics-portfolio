@@ -7,36 +7,42 @@ const teamMembers = [
     grade: "Grade 10",
     role: "Team Captain & Technical Lead",
     image: assetPath("/images/team/sanskriti.jpeg"),
+    thumbnail: assetPath("/images/team/thumbnail/sanskriti_50percent.jpeg"),
   },
   {
     name: "Sri Saanvitha Daparthi",
     grade: "Grade 10",
     role: "Project Manager & Electrical",
     image: assetPath("/images/team/saanvitha.jpeg"),
+    thumbnail: assetPath("/images/team/thumbnail/saanvitha_50percent.jpeg"),
   },
   {
     name: "Ayushmaan Madan",
     grade: "Grade 10",
     role: "Mechanical & Gripper",
     image: assetPath("/images/team/ayushmaan.png"),
+    thumbnail: assetPath("/images/team/thumbnail/ayushmaan_50percent.png"),
   },
   {
     name: "Sampath Ashok Tankala",
     grade: "Grade 10",
     role: "Documentation & Socials",
     image: assetPath("/images/team/sampath.jpeg"),
+    thumbnail: assetPath("/images/team/thumbnail/sampath_50percent.jpeg"),
   },
   {
     name: "Kongara Rakshan",
     grade: "Grade 9",
     role: "Robot Operator & Mechanics",
     image: assetPath("/images/team/rakshan.jpeg"),
+    thumbnail: assetPath("/images/team/thumbnail/rakshan_50percent.jpeg"),
   },
   {
     name: "Mahir Patel",
     grade: "Grade 9",
     role: "Mechanical & Strategy",
     image: assetPath("/images/team/mahir.jpeg"),
+    thumbnail: assetPath("/images/team/thumbnail/mahir_50percent.jpeg"),
   },
 ];
 
@@ -57,10 +63,11 @@ function Team() {
           <article className="member-card" key={member.name}>
             <div className="member-image-wrap">
               <img
-                src={member.image}
+                src={member.thumbnail}
                 alt={member.name}
                 className="member-image"
                 loading="lazy"
+                decoding="async"
               />
               <span className="member-grade">{member.grade}</span>
             </div>
@@ -78,9 +85,11 @@ function Team() {
 
         <div className="mentor-card">
           <img
-           src={assetPath("/images/team/mayank-onkar-mentor.jpeg")}
+            src={assetPath("/images/team/thumbnail/mayank-onkar-mentor_50percent.jpeg")}
             alt="Gear Shift faculty mentor"
             loading="lazy"
+            decoding="async"
+      
           />
 
           <div>
